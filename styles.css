@@ -1,0 +1,194 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+/* Sekcja powitalna */
+.welcome-section {
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 1.5s ease-in-out;
+    position: relative;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.welcome-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 200px;
+    }
+}
+
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #e65a50;
+    transform: scale(1.1);
+}
+
+/* Przyciski kategorii */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(68, 68, 68, 0.8);
+    padding: 10px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.category-buttons button {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.category-buttons button:hover {
+    background-color: #666;
+    transform: scale(1.1);
+}
+
+/* Sekcja menu i kontaktowa */
+.menu-section, .contact-section, .opening-hours-section, .map-section, .social-media-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+body.dark-mode .menu-section,
+body.dark-mode .contact-section,
+body.dark-mode .opening-hours-section,
+body.dark-mode .map-section,
+body.dark-mode .social-media-section {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Linki kontaktowe */
+.contact-link {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+body.dark-mode .contact-link {
+    color: #4da6ff;
+}
+
+/* Stopka */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: -100px;
+    width: 100%;
+    transition: bottom 0.5s ease;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+footer.visible {
+    bottom: 0;
+}
+
+/* Sekcja social media */
+.social-media-section .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media-section .social-icons a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-media-section .social-icons a:hover {
+    color: #e65a50;
+}
+
+/* Przycisk statusu */
+#statusButton {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-open {
+    background-color: green;
+    box-shadow: 0 0 10px green;
+}
+
+.status-closed {
+    background-color: red;
+    box-shadow: 0 0 10px red;
+}

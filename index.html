@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankara Kebab - Lublin</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome dla ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Sekcja powitalna z logo i przyciskami -->
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <img src="logo.jpg" alt="Logo Ankara Kebab" class="logo">
+            <h1>Ankara Kebab - Lublin</h1>
+            <div class="nav-buttons">
+                <button onclick="scrollToSection('menu')">Menu</button>
+                <button onclick="scrollToSection('opening-hours')">Godziny otwarcia</button>
+                <button onclick="scrollToSection('contact')">Kontakt</button>
+                <button onclick="toggleDarkMode()" id="themeButton">🌙 Ciemny motyw</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja z przyciskami kategorii -->
+    <section class="category-buttons" id="categoryButtons">
+        <button onclick="scrollToCategory('kapsalon')">Kapsalon</button>
+        <button onclick="scrollToCategory('pita')">Pita</button>
+        <button onclick="scrollToCategory('bulka')">Bułka</button>
+        <button onclick="scrollToCategory('danie')">Danie</button>
+        <button onclick="scrollToCategory('napoje')">Napoje</button>
+        <button onclick="scrollToCategory('dodatki')">Dodatki</button>
+        <button onclick="scrollToCategory('sosy')">Sosy</button>
+        <button onclick="scrollToCategory('surowki')">Surówki</button>
+    </section>
+
+    <!-- Sekcja menu -->
+    <section class="menu-section" id="menu">
+        <h2>Menu</h2>
+
+        <!-- Kapsalon -->
+        <div id="kapsalon">
+            <h3>Kapsalon</h3>
+            <div class="menu-item">
+                <span>Classic</span>
+                <span>30zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Maxi</span>
+                <span>40zł</span>
+            </div>
+        </div>
+
+        <!-- Pita -->
+        <div id="pita">
+            <h3>Pita</h3>
+            <div class="menu-item">
+                <span>Mini (Kurczak)</span>
+                <span>21zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Mini (Wołowina/Mieszane)</span>
+                <span>20zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Classic (Kurczak)</span>
+                <span>26zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Classic (Wołowina/Mieszane)</span>
+                <span>25zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Maxi (Kurczak)</span>
+                <span>31zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Maxi (Wołowina/Mieszane)</span>
+                <span>30zł</span>
+            </div>
+        </div>
+
+        <!-- Bułka -->
+        <div id="bulka">
+            <h3>Bułka</h3>
+            <div class="menu-item">
+                <span>Mini (Kurczak)</span>
+                <span>25zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Mini (Wołowina/Mieszane)</span>
+                <span>24zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Classic (Kurczak)</span>
+                <span>29zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Classic (Wołowina/Mieszane)</span>
+                <span>28zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Maxi (Kurczak)</span>
+                <span>32zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Maxi (Wołowina/Mieszane)</span>
+                <span>31zł</span>
+            </div>
+        </div>
+
+        <!-- Danie -->
+        <div id="danie">
+            <h3>Danie</h3>
+            <div class="menu-item">
+                <span>Mini (Kurczak)</span>
+                <span>26zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Mini (Wołowina/Mieszane)</span>
+                <span>25zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Classic (Kurczak)</span>
+                <span>31zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Classic (Wołowina/Mieszane)</span>
+                <span>30zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Maxi (Kurczak)</span>
+                <span>35zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Maxi (Wołowina/Mieszane)</span>
+                <span>34zł</span>
+            </div>
+            <p>(Opakowanie + 2zł)</p>
+        </div>
+
+        <!-- Napoje -->
+        <div id="napoje">
+            <h3>Napoje</h3>
+            <div class="menu-item">
+                <span>Pepsi/Pepsi Max (0,33l)</span>
+                <span>5zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Mirinda (0,5l)</span>
+                <span>7zł</span>
+            </div>
+            <div class="menu-item">
+                <span>7UP (0,85l)</span>
+                <span>10zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Monster</span>
+                <span>10zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Mountain Dew (0,5l)</span>
+                <span>7zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Sok</span>
+                <span>5zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Lipton</span>
+                <span>5zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Woda</span>
+                <span>5zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Rockstar (0,25l)</span>
+                <span>5zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Piwo lane/butelka</span>
+                <span>8zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Sok do piwa</span>
+                <span>1zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Ayran</span>
+                <span>4zł</span>
+            </div>
+        </div>
+
+        <!-- Dodatki -->
+        <div id="dodatki">
+            <h3>Dodatki</h3>
+            <div class="menu-item">
+                <span>Jalapeno, oliwki, pomidor</span>
+                <span>2zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Ser żółty, ser feta</span>
+                <span>3zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Cebula prażona</span>
+                <span>1zł</span>
+            </div>
+            <div class="menu-item">
+                <span>Frytki/ziemniaki (200g)</span>
+                <span>9zł</span>
+            </div>
+        </div>
+
+        <!-- Sosy -->
+        <div id="sosy">
+            <h3>Sosy</h3>
+            <p>(Dodatkowy sos 3zł + 10gr opakowanie)</p>
+            <p>Czosnkowy, Ziołowy, Ostry, Ketchup, Słodko-ostry, BBQ, Serowy, Miodowo-musztardowy, Ostra Karolina (dostępny sezonowo)</p>
+        </div>
+
+        <!-- Surówki -->
+        <div id="surowki">
+            <h3>Surówki</h3>
+            <p>Klasyczna - biała kapusta z marchewką</p>
+            <p>Wiosenna - kapusta pekińska, ogórek, kukurydza, papryka, cebula</p>
+        </div>
+    </section>
+
+ <!-- Sekcja godzin otwarcia -->
+ <section class="opening-hours-section" id="opening-hours">
+    <h2>Godziny otwarcia</h2>
+    <div class="opening-hours-status">
+        <p id="statusText">Status restauracji:</p>
+        <button id="statusButton" class="status-closed">Zamknięte</button>
+    </div>
+    <div class="opening-hours-list">
+        <p><strong>Poniedziałek:</strong> 10:00 - 00:00</p>
+        <p><strong>Wtorek:</strong> 10:00 - 00:00</p>
+        <p><strong>Środa:</strong> 10:00 - 00:00</p>
+        <p><strong>Czwartek:</strong> 10:00 - 00:00</p>
+        <p><strong>Piątek:</strong> 10:00 - 02:00</p>
+        <p><strong>Sobota:</strong> 10:00 - 02:00</p>
+        <p><strong>Niedziela:</strong> 12:00 - 00:00</p>
+    </div>
+</section>
+
+<!-- Sekcja kontaktowa -->
+<section class="contact-section" id="contact">
+    <h2>Kontakt</h2>
+    <p><strong>Adres:</strong> Głuska 86, Lublin, Poland, 20-380</p>
+    <p><strong>Telefon:</strong> <a href="tel:604474727" class="contact-link">604 474 727</a></p>
+    <p><strong>E-mail:</strong> <a href="mailto:ankarakebablublin@gmail.com" class="contact-link">ankarakebablublin@gmail.com</a></p>
+</section>
+
+<!-- Sekcja z mapą Google -->
+<section class="map-section">
+    <h2>Lokalizacja</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220.9856346308841!2d22.59540115579213!3d51.197573432801654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4722575b4bf3b9d9%3A0x818d1588fedcd0e4!2sAnkara%20Kebab!5e0!3m2!1spl!2spl!4v1742581475657!5m2!1spl!2spl"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+
+<!-- Sekcja social media -->
+<section class="social-media-section">
+    <h2>Śledź nas</h2>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Stopka -->
+<footer id="footer">
+    &copy; 2023 Ankara Kebab. Wszelkie prawa zastrzeżone.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
