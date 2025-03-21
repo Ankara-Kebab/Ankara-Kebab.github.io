@@ -46,19 +46,24 @@ body.dark-mode {
     }
 }
 
+/* Domyślne style dla przycisków nawigacyjnych */
 .nav-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Zawijanie przycisków do nowych linii */
+    justify-content: center;
     margin-top: 20px;
 }
 
 .nav-buttons button {
     background-color: #ff6f61;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px; /* Zmniejszony padding */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 5px; /* Zmniejszony margines */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 14px; /* Zmniejszony rozmiar czcionki */
 }
 
 .nav-buttons button:hover {
@@ -69,10 +74,10 @@ body.dark-mode {
 /* Przyciski kategorii */
 .category-buttons {
     display: flex;
+    flex-wrap: wrap; /* Zawijanie przycisków do nowych linii */
     justify-content: center;
     background-color: rgba(68, 68, 68, 0.8);
     padding: 10px;
-    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -81,17 +86,30 @@ body.dark-mode {
 .category-buttons button {
     background-color: #555;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px; /* Zmniejszony padding */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
+    margin: 5px; /* Zmniejszony margines */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 14px; /* Zmniejszony rozmiar czcionki */
 }
 
 .category-buttons button:hover {
     background-color: #666;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .nav-buttons button {
+        padding: 8px 12px; /* Jeszcze mniejszy padding na małych ekranach */
+        font-size: 12px; /* Jeszcze mniejszy rozmiar czcionki */
+    }
+
+    .category-buttons button {
+        padding: 6px 12px; /* Jeszcze mniejszy padding na małych ekranach */
+        font-size: 12px; /* Jeszcze mniejszy rozmiar czcionki */
+    }
 }
 
 /* Sekcja menu i kontaktowa */
